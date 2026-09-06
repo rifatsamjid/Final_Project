@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../../../../assets/bookingIcon.png";
+import img from "../../../assets/bookingIcon.png"
 
 const HowIt = () => {
   const data = [
