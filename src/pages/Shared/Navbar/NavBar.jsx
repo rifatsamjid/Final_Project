@@ -1,14 +1,32 @@
 import React from "react";
 import Logo from "../../../components/Logo/Logo";
+import { NavLink } from "react-router";
 
 const NavBar = () => {
   const Links = (
     <>
       <li>
-        <a>Item 1</a>
+        <NavLink to="">Service</NavLink>
       </li>
       <li>
-        <a>Parent</a>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "bg-primary px-2 py-0.5 rounded-xl" : ""
+          }
+          to="/coverage"
+        >
+          Coverage
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "bg-primary px-2 py-0.5 rounded-xl" : ""
+          }
+          to="/about"
+        >
+          About Us
+        </NavLink>
       </li>
       <li>
         <a>Item 3</a>
@@ -49,9 +67,7 @@ const NavBar = () => {
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          {Links}
-        </ul>
+        <ul className="menu menu-horizontal px-1">{Links}</ul>
       </div>
       <div className="navbar-end">
         <a className="btn">Button</a>
